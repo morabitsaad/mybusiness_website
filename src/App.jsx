@@ -223,13 +223,19 @@ export default function App() {
 
           <div className="flex gap-6 mt-4 md:mt-0">
 
-            <a href="#privacy" className="hover:text-white transition">
-              Privacy Policy
-            </a>
+			<a
+			  href="/privacy-policy"
+			  className="hover:text-white transition"
+			>
+			  Privacy Policy
+			</a>
 
-            <a href="#terms" className="hover:text-white transition">
-              Terms & Conditions
-            </a>
+			<a
+			  href="/terms-and-conditions"
+			  className="hover:text-white transition"
+			>
+			  Terms & Conditions
+			</a>
 
           </div>
 
