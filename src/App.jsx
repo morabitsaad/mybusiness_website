@@ -156,6 +156,24 @@ function Home() {
         </Link>
 
       </section>
+	  
+	  
+	        {/* FOOTER */}
+      <footer className="border-t border-white/5 px-10 py-8 flex flex-col md:flex-row justify-between text-white/40 text-sm">
+
+        <div>© {new Date().getFullYear()} FirstStoneX</div>
+
+        <div className="flex gap-6 mt-4 md:mt-0">
+          <Link to="/privacy-policy" className="hover:text-white">
+            Privacy Policy
+          </Link>
+
+          <Link to="/terms-and-conditions" className="hover:text-white">
+            Terms & Conditions
+          </Link>
+        </div>
+
+      </footer>
 
     </Layout>
   );
