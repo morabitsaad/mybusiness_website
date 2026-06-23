@@ -158,6 +158,37 @@ function Home() {
         </Link>
 
       </section>
+	  
+	  {/* FOOTER */}
+		<footer className="bg-white border-t border-slate-200 px-10 py-8 mt-20">
+
+		  <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+
+			<div>
+			  © {new Date().getFullYear()} FirstStoneX. All rights reserved.
+			</div>
+
+			<div className="flex gap-6 mt-4 md:mt-0">
+
+			  <Link
+				to="/privacy-policy"
+				className="hover:text-slate-900 transition"
+			  >
+				Privacy Policy
+			  </Link>
+
+			  <Link
+				to="/terms-and-conditions"
+				className="hover:text-slate-900 transition"
+			  >
+				Terms & Conditions
+			  </Link>
+
+			</div>
+
+		  </div>
+
+		</footer>
 
     </Layout>
   );
