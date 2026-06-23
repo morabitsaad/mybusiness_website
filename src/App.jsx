@@ -141,7 +141,8 @@ function Home() {
 function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-slate-950 text-white px-6 py-20">
-      
+      <div className="max-w-5xl mx-auto">
+
         <h1 className="text-5xl font-bold mb-10">
           Privacy Policy
         </h1>
@@ -162,15 +163,17 @@ function PrivacyPolicy() {
           By using this website, you agree to this Privacy Policy.
         </p>
 
+      </div>
     </div>
   );
 }
 
-function Terms() {
+function TermsConditions() {
   return (
     <div className="min-h-screen bg-slate-950 text-white px-6 py-20">
 
-      
+      <div className="max-w-5xl mx-auto">
+
         <h1 className="text-5xl font-bold mb-10">
           Terms & Conditions
         </h1>
@@ -196,10 +199,11 @@ function Terms() {
           Conditions and all applicable laws and regulations.
         </p>
 
+      </div>
+
     </div>
   );
 }
-
 /* -------------------- ROUTER -------------------- */
 
 export default function App() {
