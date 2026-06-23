@@ -117,7 +117,7 @@ export default function App() {
 		  <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
 
 			<div>
-			  © {new Date().getFullYear()} SONE Partners.
+			  © {new Date().getFullYear()} FirstStoneX.
 			  All rights reserved.
 			</div>
 
