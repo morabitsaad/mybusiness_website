@@ -41,7 +41,7 @@ function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#05070d] text-white overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-sky-50 via-blue-100 to-sky-200 text-white overflow-hidden">
 
       {/* Background glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.15),transparent_40%)]" />
