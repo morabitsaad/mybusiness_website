@@ -250,9 +250,23 @@ function PrivacyPolicy() {
     <Layout>
       <Nav />
       <div className="p-10 max-w-2xl">
-        <h1 className="text-2xl font-semibold mb-4">Privacy Policy</h1>
-        <p className="text-slate-500">
-          We protect your data and ensure secure processing.
+		<h1 className="text-3xl font-semibold text-white mb-4">
+        Privacy Policy
+		</h1>
+        <p className="text-slate-300 mb-6">
+          At FirstStoneX, we are committed to protecting your privacy.
+          Any information submitted through this website is used solely
+          for business communication and service delivery purposes.
+        </p>
+
+        <p className="text-slate-300 mb-6">
+          We do not sell, rent, or disclose your personal information
+          to third parties except where required by law or necessary
+          to provide our services.
+        </p>
+
+        <p className="text-slate-300">
+          By using this website, you agree to this Privacy Policy.
         </p>
       </div>
     </Layout>
@@ -266,9 +280,28 @@ function Terms() {
     <Layout>
       <Nav />
       <div className="p-10 max-w-2xl">
-        <h1 className="text-2xl font-semibold mb-4">Terms & Conditions</h1>
-        <p className="text-slate-500">
-          Usage of this website implies acceptance of our terms.
+		<h1 className="text-3xl font-semibold text-white mb-4">
+        Terms & Conditions
+		</h1>
+        <p className="text-slate-300 mb-6">
+          The information on this website is provided for general
+          informational purposes only.
+        </p>
+
+        <p className="text-slate-300 mb-6">
+          FirstStoneX makes no warranties regarding the completeness,
+          accuracy or reliability of the information provided.
+        </p>
+
+        <p className="text-slate-300 mb-6">
+          All content, including text, graphics, logos and software,
+          is the property of FirstStoneX and may not be reproduced
+          without prior written permission.
+        </p>
+
+        <p className="text-slate-300">
+          By accessing this website, you agree to these Terms &
+          Conditions and all applicable laws and regulations.
         </p>
       </div>
     </Layout>
