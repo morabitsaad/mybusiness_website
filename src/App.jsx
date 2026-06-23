@@ -161,14 +161,14 @@ function Home() {
 	        {/* FOOTER */}
       <footer className="border-t border-white/5 px-10 py-8 flex flex-col md:flex-row justify-between text-white/40 text-sm">
 
-        <div>© {new Date().getFullYear()} FirstStoneX</div>
+        <div className="hover:text-slate-900"> © {new Date().getFullYear()} FirstStoneX</div>
 
         <div className="flex gap-6 mt-4 md:mt-0">
-          <Link to="/privacy-policy" className="hover:text-white">
+          <Link to="/privacy-policy" className="hover:text-slate-900">
             Privacy Policy
           </Link>
 
-          <Link to="/terms-and-conditions" className="hover:text-white">
+          <Link to="/terms-and-conditions" className="hover:text-slate-900">
             Terms & Conditions
           </Link>
         </div>
