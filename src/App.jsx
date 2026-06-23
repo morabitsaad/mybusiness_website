@@ -56,9 +56,7 @@ function Home() {
           <a href="#contact" className="hover:text-white">Contact</a>
         </nav>
 
-        <button className="px-4 py-2 rounded-lg bg-white text-black text-sm font-medium hover:opacity-90">
-          Get started
-        </button>
+
       </header>
 
       {/* HERO */}
@@ -77,15 +75,7 @@ function Home() {
           and financial systems for global organizations.
         </p>
 
-        <div className="mt-10 flex justify-center gap-4">
-          <button className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition flex items-center gap-2">
-            Get started <ArrowRight size={16} />
-          </button>
-
-          <button className="px-6 py-3 rounded-xl border border-white/10 hover:bg-white/5 transition">
-            Learn more
-          </button>
-        </div>
+  
       </section>
 
       {/* SERVICES */}
