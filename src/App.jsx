@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Routes, Route, Link } from "react-router-dom";
 import {
   Globe,
   CreditCard,
@@ -7,7 +8,9 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-export default function App() {
+/* -------------------- HOME PAGE -------------------- */
+
+function Home() {
   const services = [
     {
       icon: Globe,
@@ -44,15 +47,14 @@ export default function App() {
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-5xl md:text-7xl font-bold text-white"
+          className="text-5xl md:text-7xl font-bold"
         >
           Global IT, Payments & Finance Expertise
         </motion.h1>
 
         <p className="mt-8 text-xl text-slate-300 max-w-3xl mx-auto">
-          Delivering world-class consulting, payment transformation,
-          financial technology solutions, and program management services
-          across international markets.
+          Delivering consulting, payment transformation, fintech solutions,
+          and program management services worldwide.
         </p>
 
         <button className="mt-10 px-8 py-4 bg-blue-600 rounded-lg hover:bg-blue-700 transition">
@@ -60,23 +62,18 @@ export default function App() {
         </button>
       </section>
 
-
       {/* Services */}
       <section className="max-w-7xl mx-auto py-20 px-6">
-
-        <h2 className="text-4xl font-bold text-center mb-12 text-white">
+        <h2 className="text-4xl font-bold text-center mb-12">
           Our Expertise
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
-
           {services.map((service, index) => (
-
             <div
               key={index}
               className="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-blue-500 transition"
             >
-
               <service.icon className="w-10 h-10 text-blue-400 mb-4" />
 
               <h3 className="text-xl font-semibold mb-3">
@@ -86,97 +83,91 @@ export default function App() {
               <p className="text-slate-400">
                 {service.desc}
               </p>
-
             </div>
-
           ))}
-
         </div>
-
       </section>
-
 
       {/* About */}
-
       <section className="bg-slate-900 py-20 px-6">
-
         <div className="max-w-4xl mx-auto text-center">
-
-          <h2 className="text-4xl font-bold text-white">
-            Who We Are
-          </h2>
+          <h2 className="text-4xl font-bold">Who We Are</h2>
 
           <p className="mt-6 text-slate-300 text-lg">
-            FirstStoneX is a global consulting firm specialized in
-            Information Technology, Payment Systems, Financial Services,
-            and Program Management.
-
-            We help organizations transform technology platforms,
-            modernize payment ecosystems, optimize financial operations,
-            and successfully deliver strategic programs worldwide.
+            FirstStoneX is a global consulting firm specialized in IT,
+            Payment Systems, Financial Services, and Program Management.
           </p>
-
         </div>
-
       </section>
 
-
       {/* Contact */}
-
       <section className="py-20 px-6 text-center">
-
-        <h2 className="text-4xl font-bold text-white">
-          Let's Build Something Global
-        </h2>
+        <h2 className="text-4xl font-bold">Let's Build Something Global</h2>
 
         <p className="text-slate-400 mt-4">
-          Reach out to discuss your next transformation program.
+          Reach out to discuss your transformation program.
         </p>
 
         <button className="mt-8 px-8 py-4 bg-blue-600 rounded-lg hover:bg-blue-700 transition">
           Get In Touch
         </button>
-
       </section>
 
-
-    
-
-
       {/* Footer */}
-
       <footer className="border-t border-slate-800 py-8 px-6 text-slate-500">
-
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
 
           <div>
-            © {new Date().getFullYear()} FirstStoneX.
-            All rights reserved.
+            © {new Date().getFullYear()} FirstStoneX
           </div>
 
           <div className="flex gap-6 mt-4 md:mt-0">
+            <Link to="/privacy-policy" className="hover:text-white">
+              Privacy Policy
+            </Link>
 
-			<a
-			  href="/privacy-policy"
-			  className="hover:text-white transition"
-			>
-			  Privacy Policy
-			</a>
-
-			<a
-			  href="/terms-and-conditions"
-			  className="hover:text-white transition"
-			>
-			  Terms & Conditions
-			</a>
-
+            <Link to="/terms-and-conditions" className="hover:text-white">
+              Terms & Conditions
+            </Link>
           </div>
-
         </div>
-
       </footer>
-
     </div>
   );
 }
 
+/* -------------------- PAGES -------------------- */
+
+function PrivacyPolicy() {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white p-10">
+      <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
+      <p className="text-slate-300">
+        This is your privacy policy page.
+      </p>
+    </div>
+  );
+}
+
+function Terms() {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white p-10">
+      <h1 className="text-3xl font-bold mb-4">Terms & Conditions</h1>
+      <p className="text-slate-300">
+        This is your terms and conditions page.
+      </p>
+    </div>
+  );
+}
+
+/* -------------------- ROUTER -------------------- */
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-and-conditions" element={<Terms />} />
+    </Routes>
+  );
+}
