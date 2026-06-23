@@ -143,9 +143,7 @@ function PrivacyPolicy() {
     <div className="min-h-screen bg-slate-950 text-white p-10">
       <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
       <p className="text-slate-300">
-        At FirstStoneX, we are committed to protecting your privacy.
-          Any information submitted through this website is used solely
-          for business communication and service delivery purposes.
+        This is your privacy policy page.
       </p>
     </div>
   );
