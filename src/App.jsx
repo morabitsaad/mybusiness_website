@@ -243,9 +243,11 @@ function PrivacyPolicy() {
     <Layout>
       <Nav />
       <div >
-		<h1 cclassName="text-2xl font-semibold text-center mb-12">
-        Privacy Policy
-		</h1>
+		<h2 className="text-2xl font-semibold">
+          Privacy Policy
+        </h2>
+        
+		
         <p className="mt-6 text-slate-500 max-w-2xl mx-auto text-lg">
           At FirstStoneX, we are committed to protecting your privacy.
           Any information submitted through this website is used solely
@@ -272,7 +274,7 @@ function Terms() {
   return (
     <Layout>
       <Nav />
-      <div className="p-10 max-w-2xl">
+      <div >
 		<h1 className="text-2xl font-semibold text-center mb-12">
         Terms & Conditions
 		</h1>
