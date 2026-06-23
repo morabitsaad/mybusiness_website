@@ -31,13 +31,6 @@ function Nav() {
         <Link className="hover:text-slate-900" to="/">Home</Link>
         <Link className="hover:text-slate-900" to="/contact">Contact</Link>
       </nav>
-
-      <Link
-        to="/contact"
-        className="px-4 py-2 rounded-lg bg-[#4F7CFF] text-white hover:bg-[#3f6cf0]"
-      >
-        Get started
-      </Link>
     </header>
   );
 }
@@ -250,7 +243,7 @@ function PrivacyPolicy() {
     <Layout>
       <Nav />
       <div className="p-10 max-w-2xl">
-		<h1 className="text-3xl font-semibold text-white mb-4">
+		<h1 cclassName="text-2xl font-semibold text-center mb-12">
         Privacy Policy
 		</h1>
         <p className="mt-6 text-slate-500 max-w-2xl mx-auto text-lg">
@@ -280,7 +273,7 @@ function Terms() {
     <Layout>
       <Nav />
       <div className="p-10 max-w-2xl">
-		<h1 className="text-3xl font-semibold text-white mb-4">
+		<h1 className="text-2xl font-semibold text-center mb-12">
         Terms & Conditions
 		</h1>
         <p className="mt-6 text-slate-500 max-w-2xl mx-auto text-lg">
