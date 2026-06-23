@@ -9,7 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-/* ---------------- HERO ---------------- */
+/* ---------------- HOME ---------------- */
 
 function Home() {
   const services = [
@@ -48,11 +48,9 @@ function Home() {
 
       {/* NAV */}
       <header className="relative flex justify-between items-center px-10 py-6 border-b border-white/5">
-        <div className="text-xl font-semibold tracking-wide">
-          FirstStoneX
-        </div>
+        <div className="text-xl font-semibold">FirstStoneX</div>
 
-        <nav className="hidden md:flex gap-8 text-sm text-white/70">
+        <nav className="hidden md:flex gap-8 text-sm text-white/60">
           <a href="#services" className="hover:text-white">Services</a>
           <a href="#about" className="hover:text-white">About</a>
           <a href="#contact" className="hover:text-white">Contact</a>
@@ -68,15 +66,15 @@ function Home() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-5xl md:text-7xl font-semibold leading-tight"
+          className="text-5xl md:text-7xl font-semibold leading-tight text-white"
         >
           Modern financial & IT systems<br />
           built for scale
         </motion.h1>
 
         <p className="mt-8 text-lg text-white/60 max-w-2xl mx-auto">
-          We design and deliver enterprise-grade technology, payment
-          infrastructure, and financial systems for global organizations.
+          We design enterprise-grade technology, payment infrastructure,
+          and financial systems for global organizations.
         </p>
 
         <div className="mt-10 flex justify-center gap-4">
@@ -91,8 +89,9 @@ function Home() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="relative px-6 py-20 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold text-center mb-12">
+      <section id="services" className="px-6 py-20 max-w-6xl mx-auto">
+
+        <h2 className="text-3xl font-semibold text-white text-center mb-12">
           Enterprise capabilities
         </h2>
 
@@ -104,7 +103,7 @@ function Home() {
             >
               <s.icon className="w-8 h-8 text-blue-400 mb-4" />
 
-              <h3 className="text-lg font-semibold mb-2">
+              <h3 className="text-lg font-semibold text-white mb-2">
                 {s.title}
               </h3>
 
@@ -118,50 +117,55 @@ function Home() {
 
       {/* ABOUT */}
       <section id="about" className="px-6 py-24 max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-semibold mb-6">
+
+        <h2 className="text-3xl font-semibold text-white mb-6">
           Built for enterprise transformation
         </h2>
 
         <p className="text-white/60 leading-relaxed">
-          FirstStoneX supports organizations in modernizing their technology stack,
-          payment ecosystems, and financial operations through scalable architecture,
-          security-first design, and global delivery standards.
+          FirstStoneX helps organizations modernize technology stacks,
+          payment ecosystems, and financial operations with scalable,
+          secure architecture and global delivery standards.
         </p>
+
       </section>
 
       {/* CONTACT */}
       <section id="contact" className="px-6 py-24 text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-semibold">
-            Start your transformation
-          </h2>
 
-          <p className="text-white/60 mt-4">
-            Let’s design a scalable, secure and future-ready system together.
-          </p>
+        <h2 className="text-3xl font-semibold text-white">
+          Start your transformation
+        </h2>
 
-          <button className="mt-8 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition">
-            Contact us
-          </button>
-        </div>
+        <p className="text-white/60 mt-4">
+          Let’s design a scalable and secure system together.
+        </p>
+
+        <button className="mt-8 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition">
+          Contact us
+        </button>
+
       </section>
 
       {/* FOOTER */}
       <footer className="border-t border-white/5 px-10 py-8 flex flex-col md:flex-row justify-between text-white/40 text-sm">
+
         <div>© {new Date().getFullYear()} FirstStoneX</div>
 
         <div className="flex gap-6 mt-4 md:mt-0">
           <Link to="/privacy-policy" className="hover:text-white">
-            Privacy
+            Privacy Policy
           </Link>
+
           <Link to="/terms-and-conditions" className="hover:text-white">
-            Terms
+            Terms & Conditions
           </Link>
         </div>
+
       </footer>
 
-      {/* gradient bottom glow */}
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent" />
+
     </div>
   );
 }
@@ -171,9 +175,11 @@ function Home() {
 function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-[#05070d] text-white p-10">
-      <h1 className="text-3xl font-semibold mb-4">Privacy Policy</h1>
+      <h1 className="text-3xl font-semibold text-white mb-4">
+        Privacy Policy
+      </h1>
       <p className="text-white/60 max-w-2xl">
-        This page explains how data is handled in a secure and compliant manner.
+        This page explains how data is handled securely and responsibly.
       </p>
     </div>
   );
@@ -182,7 +188,9 @@ function PrivacyPolicy() {
 function Terms() {
   return (
     <div className="min-h-screen bg-[#05070d] text-white p-10">
-      <h1 className="text-3xl font-semibold mb-4">Terms & Conditions</h1>
+      <h1 className="text-3xl font-semibold text-white mb-4">
+        Terms & Conditions
+      </h1>
       <p className="text-white/60 max-w-2xl">
         These terms govern the use of this platform and services.
       </p>
