@@ -275,9 +275,10 @@ function Terms() {
     <Layout>
       <Nav />
       <div >
-		<h1 className="text-2xl font-semibold text-center mb-12">
-        Terms & Conditions
-		</h1>
+		
+		<h2 className="text-2xl font-semibold">
+          Terms & Conditions
+        </h2>
         <p className="mt-6 text-slate-500 max-w-2xl mx-auto text-lg">
           The information on this website is provided for general
           informational purposes only.
