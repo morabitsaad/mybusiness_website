@@ -242,7 +242,7 @@ function PrivacyPolicy() {
   return (
     <Layout>
       <Nav />
-      <div className="p-10 max-w-2xl">
+      <div >
 		<h1 cclassName="text-2xl font-semibold text-center mb-12">
         Privacy Policy
 		</h1>
