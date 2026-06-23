@@ -140,74 +140,7 @@ export default function App() {
       </section>
 
 
-      {/* Privacy Policy */}
-
-      <section
-        id="privacy"
-        className="bg-slate-900 py-20 px-6"
-      >
-
-        <div className="max-w-5xl mx-auto">
-
-          <h2 className="text-4xl font-bold text-white mb-8">
-            Privacy Policy
-          </h2>
-
-          <p className="text-slate-300 mb-6">
-            At FirstStoneX, we are committed to protecting your privacy.
-            Any information submitted through this website is used solely
-            for business communication and service delivery purposes.
-          </p>
-
-          <p className="text-slate-300 mb-6">
-            We do not sell, rent, or disclose your personal information
-            to third parties except where required by law or necessary
-            to provide our services.
-          </p>
-
-          <p className="text-slate-300">
-            By using this website, you agree to this Privacy Policy.
-          </p>
-
-        </div>
-
-      </section>
-
-
-      {/* Terms & Conditions */}
-
-      <section
-        id="terms"
-        className="py-20 px-6"
-      >
-
-        <div className="max-w-5xl mx-auto">
-
-          <h2 className="text-4xl font-bold text-white mb-8">
-            Terms & Conditions
-          </h2>
-
-          <p className="text-slate-300 mb-6">
-            The information on this website is provided for general
-            informational purposes only. FirstStoneX makes no warranties
-            regarding the completeness, accuracy or reliability of the
-            information provided.
-          </p>
-
-          <p className="text-slate-300 mb-6">
-            All content, including text, graphics, logos and software,
-            is the property of FirstStoneX and may not be reproduced
-            without prior written permission.
-          </p>
-
-          <p className="text-slate-300">
-            By accessing this website, you agree to these Terms &
-            Conditions and all applicable laws and regulations.
-          </p>
-
-        </div>
-
-      </section>
+    
 
 
       {/* Footer */}
