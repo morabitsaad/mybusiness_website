@@ -113,9 +113,34 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-slate-800 py-8 text-center text-slate-500">
-        © {new Date().getFullYear()} FirstStoneX. All rights reserved.
-      </footer>
+		<footer className="border-t border-slate-800 py-8 px-6 text-slate-500">
+		  <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+
+			<div>
+			  © {new Date().getFullYear()} SONE Partners.
+			  All rights reserved.
+			</div>
+
+			<div className="flex gap-6 mt-4 md:mt-0">
+
+			  <a
+				href="#privacy"
+				className="hover:text-white transition"
+			  >
+				Privacy Policy
+			  </a>
+
+			  <a
+				href="#terms"
+				className="hover:text-white transition"
+			  >
+				Terms & Conditions
+			  </a>
+
+			</div>
+
+		  </div>
+		</footer>
     </div>
   );
 }
