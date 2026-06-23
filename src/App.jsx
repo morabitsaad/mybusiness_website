@@ -141,9 +141,12 @@ function Home() {
           Let’s design a scalable and secure system together.
         </p>
 
-        <button className="mt-8 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition">
-          Contact us
-        </button>
+		<Link
+		  to="/contact"
+		  className="mt-8 inline-block px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition"
+		>
+		  Contact us
+		</Link>
 
       </section>
 
@@ -227,6 +230,53 @@ function Terms() {
   );
 }
 
+
+function Contact() {
+  return (
+    <div className="min-h-screen bg-[#05070d] text-white flex items-center justify-center px-6">
+      <div className="max-w-xl w-full">
+
+        <h1 className="text-4xl font-semibold text-white mb-4">
+          Contact us
+        </h1>
+
+        <p className="text-white/60 mb-8">
+          Let’s discuss your project and build something scalable.
+        </p>
+
+        <form className="space-y-4">
+
+          <input
+            type="text"
+            placeholder="Full name"
+            className="w-full p-3 rounded-lg bg-white/5 border border-white/10 text-white outline-none"
+          />
+
+          <input
+            type="email"
+            placeholder="Email address"
+            className="w-full p-3 rounded-lg bg-white/5 border border-white/10 text-white outline-none"
+          />
+
+          <textarea
+            placeholder="Your message"
+            rows="5"
+            className="w-full p-3 rounded-lg bg-white/5 border border-white/10 text-white outline-none"
+          />
+
+          <button
+            type="button"
+            className="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-500 transition"
+          >
+            Send message
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  );
+}
 /* ---------------- ROUTER ---------------- */
 
 export default function App() {
@@ -235,6 +285,7 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms-and-conditions" element={<Terms />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 }
