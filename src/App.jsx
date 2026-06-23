@@ -1,281 +1,278 @@
-import { motion } from "framer-motion";
 import { Routes, Route, Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
-  Globe,
+  ArrowRight,
+  Check,
   CreditCard,
   BarChart3,
-  Briefcase,
-  ShieldCheck,
-  ArrowRight,
+  Shield,
+  Zap,
 } from "lucide-react";
 
-/* ---------------- HOME ---------------- */
+/* ---------------- GLOBAL LAYOUT ---------------- */
 
-function Home() {
-  const services = [
-    {
-      icon: Globe,
-      title: "Global IT Architecture",
-      desc: "Enterprise-grade systems designed for scale, resilience, and global operations.",
-    },
-    {
-      icon: CreditCard,
-      title: "Payment Infrastructure",
-      desc: "Secure, scalable and compliant payment ecosystems and PSP integrations.",
-    },
-    {
-      icon: BarChart3,
-      title: "Financial Systems",
-      desc: "Data-driven finance platforms, trading systems and analytics engines.",
-    },
-    {
-      icon: Briefcase,
-      title: "Program Delivery",
-      desc: "End-to-end transformation programs with agile execution and governance.",
-    },
-    {
-      icon: ShieldCheck,
-      title: "Risk & Compliance",
-      desc: "Security, regulatory compliance, and enterprise resilience frameworks.",
-    },
-  ];
-
+function Layout({ children }) {
   return (
-    <div className="min-h-screen bg-[#05070d] text-white overflow-hidden">
-
-      {/* Background glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.15),transparent_40%)]" />
-
-      {/* NAV */}
-      <header className="relative flex justify-between items-center px-10 py-6 border-b border-white/5">
-        <div className="text-xl font-semibold">FirstStoneX</div>
-
-        <nav className="hidden md:flex gap-8 text-sm text-white/60">
-          <a href="#services" className="hover:text-white">Services</a>
-          <a href="#about" className="hover:text-white">About</a>
-          <a href="#contact" className="hover:text-white">Contact</a>
-        </nav>
-
-
-      </header>
-
-      {/* HERO */}
-      <section className="relative text-center px-6 py-28">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-5xl md:text-7xl font-semibold leading-tight text-white"
-        >
-          Modern financial & IT systems<br />
-          built for scale
-        </motion.h1>
-
-        <p className="mt-8 text-lg text-white/60 max-w-2xl mx-auto">
-          We design enterprise-grade technology, payment infrastructure,
-          and financial systems for global organizations.
-        </p>
-
-  
-      </section>
-
-      {/* SERVICES */}
-      <section id="services" className="px-6 py-20 max-w-6xl mx-auto">
-
-        <h2 className="text-3xl font-semibold text-white text-center mb-12">
-          Enterprise capabilities
-        </h2>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {services.map((s, i) => (
-            <div
-              key={i}
-              className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition"
-            >
-              <s.icon className="w-8 h-8 text-blue-400 mb-4" />
-
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {s.title}
-              </h3>
-
-              <p className="text-white/60 text-sm">
-                {s.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ABOUT */}
-      <section id="about" className="px-6 py-24 max-w-4xl mx-auto text-center">
-
-        <h2 className="text-3xl font-semibold text-white mb-6">
-          Built for enterprise transformation
-        </h2>
-
-        <p className="text-white/60 leading-relaxed">
-          FirstStoneX helps organizations modernize technology stacks,
-          payment ecosystems, and financial operations with scalable,
-          secure architecture and global delivery standards.
-        </p>
-
-      </section>
-
-      {/* CONTACT */}
-      <section id="contact" className="px-6 py-24 text-center">
-
-        <h2 className="text-3xl font-semibold text-white">
-          Start your transformation
-        </h2>
-
-        <p className="text-white/60 mt-4">
-          Let’s design a scalable and secure system together.
-        </p>
-
-		<Link
-		  to="/contact"
-		  className="mt-8 inline-block px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition"
-		>
-		  Contact us
-		</Link>
-
-      </section>
-
-      {/* FOOTER */}
-      <footer className="border-t border-white/5 px-10 py-8 flex flex-col md:flex-row justify-between text-white/40 text-sm">
-
-        <div>© {new Date().getFullYear()} FirstStoneX</div>
-
-        <div className="flex gap-6 mt-4 md:mt-0">
-          <Link to="/privacy-policy" className="hover:text-white">
-            Privacy Policy
-          </Link>
-
-          <Link to="/terms-and-conditions" className="hover:text-white">
-            Terms & Conditions
-          </Link>
-        </div>
-
-      </footer>
-
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent" />
-
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-blue-50 to-white text-slate-900">
+      {children}
     </div>
   );
 }
 
-/* ---------------- PAGES ---------------- */
+/* ---------------- NAV ---------------- */
+
+function Nav() {
+  return (
+    <header className="flex justify-between items-center px-10 py-6 bg-white/60 backdrop-blur-xl border-b border-slate-200/60">
+      <div className="font-semibold text-lg tracking-tight">
+        FirstStoneX
+      </div>
+
+      <nav className="hidden md:flex gap-8 text-sm text-slate-600">
+        <Link className="hover:text-slate-900" to="/">Home</Link>
+        <Link className="hover:text-slate-900" to="/pricing">Pricing</Link>
+        <Link className="hover:text-slate-900" to="/contact">Contact</Link>
+        <Link className="hover:text-slate-900" to="/dashboard">Dashboard</Link>
+      </nav>
+
+      <Link
+        to="/contact"
+        className="px-4 py-2 rounded-xl bg-slate-900 text-white text-sm hover:opacity-90"
+      >
+        Get started
+      </Link>
+    </header>
+  );
+}
+
+/* ---------------- HOME ---------------- */
+
+function Home() {
+  return (
+    <Layout>
+      <Nav />
+
+      {/* HERO */}
+      <section className="text-center px-6 py-28">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-5xl md:text-7xl font-semibold tracking-tight"
+        >
+          Financial infrastructure<br />
+          for modern companies
+        </motion.h1>
+
+        <p className="mt-6 text-slate-600 max-w-2xl mx-auto text-lg">
+          Build secure, scalable and elegant financial systems inspired by
+          the world’s best digital products.
+        </p>
+
+        <div className="mt-10 flex justify-center gap-4">
+          <Link className="px-6 py-3 rounded-2xl bg-slate-900 text-white flex items-center gap-2">
+            Get started <ArrowRight size={16} />
+          </Link>
+
+          <Link className="px-6 py-3 rounded-2xl border border-slate-300">
+            Learn more
+          </Link>
+        </div>
+      </section>
+
+      {/* FEATURES */}
+      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-6">
+
+        <Card icon={CreditCard} title="Payments" />
+        <Card icon={BarChart3} title="Analytics" />
+        <Card icon={Shield} title="Security" />
+        <Card icon={Zap} title="Performance" />
+
+      </section>
+    </Layout>
+  );
+}
+
+/* ---------------- CARD ---------------- */
+
+function Card({ icon: Icon, title }) {
+  return (
+    <div className="p-6 rounded-3xl bg-white/70 border border-slate-200 shadow-sm hover:shadow-md transition backdrop-blur-xl">
+      <Icon className="text-slate-700 mb-3" />
+      <h3 className="font-medium text-slate-900">{title}</h3>
+      <p className="text-slate-500 text-sm mt-2">
+        Clean, scalable financial infrastructure.
+      </p>
+    </div>
+  );
+}
+
+/* ---------------- PRICING ---------------- */
+
+function Pricing() {
+  return (
+    <Layout>
+      <Nav />
+
+      <section className="px-6 py-20 text-center">
+        <h1 className="text-4xl font-semibold">Pricing</h1>
+
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mt-12">
+
+          <Plan name="Starter" price="$0" />
+          <Plan name="Pro" price="$29" highlight />
+          <Plan name="Enterprise" price="Custom" />
+
+        </div>
+      </section>
+    </Layout>
+  );
+}
+
+function Plan({ name, price, highlight }) {
+  return (
+    <div className={`p-6 rounded-3xl border shadow-sm backdrop-blur-xl
+      ${highlight ? "bg-white border-slate-300" : "bg-white/60 border-slate-200"}
+    `}>
+      <h3 className="font-medium">{name}</h3>
+      <p className="text-3xl font-semibold mt-3">{price}</p>
+
+      <ul className="mt-4 text-sm text-slate-600 space-y-2">
+        <li className="flex gap-2"><Check size={16} /> Feature</li>
+        <li className="flex gap-2"><Check size={16} /> Feature</li>
+        <li className="flex gap-2"><Check size={16} /> Feature</li>
+      </ul>
+
+      <button className="mt-6 w-full py-2 rounded-xl bg-slate-900 text-white">
+        Choose plan
+      </button>
+    </div>
+  );
+}
+
+/* ---------------- CONTACT (APPLE STYLE) ---------------- */
+
+function Contact() {
+  return (
+    <Layout>
+      <Nav />
+
+      <section className="flex justify-center items-center py-20 px-6">
+        <div className="w-full max-w-xl bg-white/70 border border-slate-200 rounded-3xl p-10 shadow-lg backdrop-blur-xl">
+
+          <h1 className="text-3xl font-semibold">Contact us</h1>
+          <p className="text-slate-500 mt-2 mb-6">
+            We usually respond within 24 hours.
+          </p>
+
+          <div className="space-y-4">
+
+            <input className="w-full p-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-slate-300 outline-none" placeholder="Full name" />
+
+            <input className="w-full p-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-slate-300 outline-none" placeholder="Email" />
+
+            <textarea className="w-full p-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-slate-300 outline-none" rows="5" placeholder="Message" />
+
+            <button className="w-full py-3 rounded-xl bg-slate-900 text-white hover:opacity-90">
+              Send message
+            </button>
+
+          </div>
+
+        </div>
+      </section>
+    </Layout>
+  );
+}
+
+/* ---------------- DASHBOARD ---------------- */
+
+function Dashboard() {
+  return (
+    <Layout>
+      <Nav />
+
+      <div className="flex">
+
+        <aside className="w-64 min-h-screen bg-white/60 border-r border-slate-200 p-6 backdrop-blur-xl">
+          <h2 className="font-semibold">Dashboard</h2>
+
+          <nav className="mt-6 space-y-3 text-slate-600 text-sm">
+            <p>Overview</p>
+            <p>Payments</p>
+            <p>Analytics</p>
+            <p>Settings</p>
+          </nav>
+        </aside>
+
+        <main className="flex-1 p-10">
+
+          <h1 className="text-3xl font-semibold">Welcome back</h1>
+
+          <div className="grid md:grid-cols-3 gap-6 mt-8">
+
+            <MiniCard title="Revenue" value="$12,430" />
+            <MiniCard title="Transactions" value="1,240" />
+            <MiniCard title="Success rate" value="99.2%" />
+
+          </div>
+
+        </main>
+
+      </div>
+    </Layout>
+  );
+}
+
+function MiniCard({ title, value }) {
+  return (
+    <div className="p-6 rounded-3xl bg-white/70 border border-slate-200 shadow-sm backdrop-blur-xl">
+      <p className="text-slate-500 text-sm">{title}</p>
+      <p className="text-2xl font-semibold mt-2">{value}</p>
+    </div>
+  );
+}
+
+/* ---------------- LEGAL ---------------- */
 
 function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-[#05070d] text-white p-10">
-      <h1 className="text-3xl font-semibold text-white mb-4">
-        Privacy Policy
-      </h1>
-        <p className="text-slate-300 mb-6">
-          At FirstStoneX, we are committed to protecting your privacy.
-          Any information submitted through this website is used solely
-          for business communication and service delivery purposes.
+    <Layout>
+      <Nav />
+      <div className="p-10 max-w-2xl">
+        <h1 className="text-3xl font-semibold mb-4">Privacy Policy</h1>
+        <p className="text-slate-600">
+          We protect your data according to modern privacy standards.
         </p>
-
-        <p className="text-slate-300 mb-6">
-          We do not sell, rent, or disclose your personal information
-          to third parties except where required by law or necessary
-          to provide our services.
-        </p>
-
-        <p className="text-slate-300">
-          By using this website, you agree to this Privacy Policy.
-        </p>
-    </div>
+      </div>
+    </Layout>
   );
 }
 
 function Terms() {
   return (
-    <div className="min-h-screen bg-[#05070d] text-white p-10">
-      <h1 className="text-3xl font-semibold text-white mb-4">
-        Terms & Conditions
-      </h1>
-        <p className="text-slate-300 mb-6">
-          The information on this website is provided for general
-          informational purposes only.
+    <Layout>
+      <Nav />
+      <div className="p-10 max-w-2xl">
+        <h1 className="text-3xl font-semibold mb-4">Terms & Conditions</h1>
+        <p className="text-slate-600">
+          These terms govern your use of the platform.
         </p>
-
-        <p className="text-slate-300 mb-6">
-          FirstStoneX makes no warranties regarding the completeness,
-          accuracy or reliability of the information provided.
-        </p>
-
-        <p className="text-slate-300 mb-6">
-          All content, including text, graphics, logos and software,
-          is the property of FirstStoneX and may not be reproduced
-          without prior written permission.
-        </p>
-
-        <p className="text-slate-300">
-          By accessing this website, you agree to these Terms &
-          Conditions and all applicable laws and regulations.
-        </p>
-    </div>
-  );
-}
-
-
-function Contact() {
-  return (
-    <div className="min-h-screen bg-[#05070d] text-white flex items-center justify-center px-6">
-      <div className="max-w-xl w-full">
-
-        <h1 className="text-4xl font-semibold text-white mb-4">
-          Contact us
-        </h1>
-
-        <p className="text-white/60 mb-8">
-          Let’s discuss your project and build something scalable.
-        </p>
-
-        <form className="space-y-4">
-
-          <input
-            type="text"
-            placeholder="Full name"
-            className="w-full p-3 rounded-lg bg-white/5 border border-white/10 text-white outline-none"
-          />
-
-          <input
-            type="email"
-            placeholder="Email address"
-            className="w-full p-3 rounded-lg bg-white/5 border border-white/10 text-white outline-none"
-          />
-
-          <textarea
-            placeholder="Your message"
-            rows="5"
-            className="w-full p-3 rounded-lg bg-white/5 border border-white/10 text-white outline-none"
-          />
-
-          <button
-            type="button"
-            className="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-500 transition"
-          >
-            Send message
-          </button>
-
-        </form>
-
       </div>
-    </div>
+    </Layout>
   );
 }
+
 /* ---------------- ROUTER ---------------- */
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/pricing" element={<Pricing />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms-and-conditions" element={<Terms />} />
-      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 }
